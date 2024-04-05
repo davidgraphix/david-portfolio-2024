@@ -173,7 +173,23 @@
 	};
 	scrollWindow();
 
-	
+	const aboutMeText = document.getElementById("my-about");
+	const fullAbout = document.getElementById("full-about");
+	const seeMoreLink = document.getElementById("see-more");
+	const showLessLink = document.getElementById("show-less");
+
+	seeMoreLink.addEventListener('click', (event)=> {
+		event.preventDefault();
+		fullAbout.style.display = "Block";
+		aboutMeText.style.display = "none";
+	});
+
+	showLessLink.addEventListener('click', (e)=> {
+		e.preventDefault();
+		aboutMeText.style.display = "block";
+		fullAbout.style.display = "none";
+		
+	});
 
 	var counter = function() {
 		
